@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching – John Tengatenga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:    #bb0000;
+      --dark:   #1a1a1a;
+      --mid:    #555;
+      --light:  #f7f7f7;
+      --border: #e0e0e0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      background: #fff;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--light);
+      border-right: 1px solid var(--border);
+      padding: 48px 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    aside .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--border);
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    aside h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    aside .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--mid);
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    aside nav a {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-left: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    aside nav a:hover,
+    aside nav a.active {
+      color: var(--red);
+      border-left-color: var(--red);
+    }
+
+    aside .contact {
+      margin-top: 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--mid);
+      line-height: 1.9;
+    }
+
+    aside .contact a { color: var(--red); text-decoration: none; }
+    aside .contact a:hover { text-decoration: underline; }
+
+    main {
+      padding: 64px 60px 80px;
+      max-width: 800px;
+    }
+
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+
+    p { line-height: 1.8; margin-bottom: 14px; }
+
+    .teach-block { margin-bottom: 36px; }
+
+    .teach-block .institution {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+
+    .course-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .course-row:first-of-type { border-top: 1px solid var(--border); }
+
+    .course-name {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .course-term {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--mid);
+      white-space: nowrap;
+    }
+
+    .course-instructor {
+      font-family: 'Crimson Pro', serif;
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #888;
+      grid-column: 1 / -1;
+      margin-top: -6px;
+      padding-bottom: 4px;
+    }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 0 0 48px; }
+
+    @media (max-width: 680px) {
+      .page { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+      main  { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <img class="photo" src="headshoot_JT.png" alt="John Tengatenga" />
+    <h1>John Tengatenga</h1>
+    <p class="title">
+      PhD Candidate<br />
+      Political Science<br />
+      The Ohio State University
+    </p>
+
+    <nav>
+      <a href="index.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="book.html">Book Project</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html" class="active">Teaching</a>
+    </nav>
+
+    <div class="contact">
+      <a href="mailto:tengatenga.1@osu.edu">tengatenga.1@osu.edu</a><br />
+      614-292-2880<br />
+      <a href="https://scholar.google.com/citations?user=lkTJcEYAAAAJ&hl=en">Google Scholar</a><br />
+      Columbus, Ohio
+    </div>
+  </aside>
+
+  <main>
+
+    <section>
+      <h2>Instructor of Record</h2>
+      <div class="teach-block">
+        <div class="institution">The Ohio State University</div>
+        <div class="course-row">
+          <span class="course-name">Political Violence (UG)</span>
+          <span class="course-term">Autumn 2025, Spring 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Teaching Assistant</h2>
+
+      <div class="teach-block">
+        <div class="institution">The Ohio State University</div>
+        <div class="course-row">
+          <span class="course-name">Politics of Health (UG)</span>
+          <span class="course-term">Spring 2024, Spring 2025</span>
+          <span class="course-instructor">Dr. Vladimir Kogan</span>
+        </div>
+        <div class="course-row">
+          <span class="course-name">The Politics of Legal Decision Making (UG)</span>
+          <span class="course-term">Autumn 2024</span>
+          <span class="course-instructor">Dr. Arvind Krishnamurthy</span>
+        </div>
+        <div class="course-row">
+          <span class="course-name">Politics of Development in the Developing World (UG)</span>
+          <span class="course-term">Autumn 2023</span>
+          <span class="course-instructor">Dr. Pierskalla</span>
+        </div>
+      </div>
+
+      <div class="teach-block">
+        <div class="institution">Miami University</div>
+        <div class="course-row">
+          <span class="course-name">World Politics (UG)</span>
+          <span class="course-term">Spring 2018</span>
+          <span class="course-instructor">Dr. Ashley Streat</span>
+        </div>
+        <div class="course-row">
+          <span class="course-name">Introduction to Comparative Politics (UG)</span>
+          <span class="course-term">Fall 2017</span>
+          <span class="course-instructor">Dr. Venlin Ganev</span>
+        </div>
+      </div>
+
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Part-time Lecturer</h2>
+      <div class="teach-block">
+        <div class="institution">University of Malawi</div>
+        <div class="course-row">
+          <span class="course-name">Introduction to Political Science (UG)</span>
+          <span class="course-term">2018–2020</span>
+          <span class="course-instructor">Political and Administrative Department (PAS)</span>
+        </div>
+        <div class="course-row">
+          <span class="course-name">Regional Integration (UG)</span>
+          <span class="course-term">2018–2020</span>
+          <span class="course-instructor">Political and Administrative Department (PAS)</span>
+        </div>
+        <div class="course-row">
+          <span class="course-name">Introduction to International Relations (UG)</span>
+          <span class="course-term">2018–2020</span>
+          <span class="course-instructor">Political and Administrative Department (PAS)</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

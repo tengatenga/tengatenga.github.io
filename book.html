@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Project – John Tengatenga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:    #bb0000;
+      --dark:   #1a1a1a;
+      --mid:    #555;
+      --light:  #f7f7f7;
+      --border: #e0e0e0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      background: #fff;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--light);
+      border-right: 1px solid var(--border);
+      padding: 48px 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    aside .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--border);
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    aside h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    aside .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--mid);
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    aside nav a {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-left: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    aside nav a:hover,
+    aside nav a.active {
+      color: var(--red);
+      border-left-color: var(--red);
+    }
+
+    aside .contact {
+      margin-top: 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--mid);
+      line-height: 1.9;
+    }
+
+    aside .contact a { color: var(--red); text-decoration: none; }
+    aside .contact a:hover { text-decoration: underline; }
+
+    main {
+      padding: 64px 60px 80px;
+      max-width: 760px;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+
+    p { line-height: 1.8; margin-bottom: 20px; }
+
+    @media (max-width: 680px) {
+      .page { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+      main  { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <img class="photo" src="headshoot_JT.png" alt="John Tengatenga" />
+    <h1>John Tengatenga</h1>
+    <p class="title">
+      PhD Candidate<br />
+      Political Science<br />
+      The Ohio State University
+    </p>
+
+    <nav>
+      <a href="index.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="book.html" class="active">Book Project</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+
+    <div class="contact">
+      <a href="mailto:tengatenga.1@osu.edu">tengatenga.1@osu.edu</a><br />
+      614-292-2880<br />
+      <a href="https://scholar.google.com/citations?user=lkTJcEYAAAAJ&hl=en">Google Scholar</a><br />
+      Columbus, Ohio
+    </div>
+  </aside>
+
+  <main>
+    <h2>Book Project</h2>
+    <p>
+      My dissertation book project explores public goods provision in informal urban settlements
+      in Malawi. I focus on the role of informally elected local leaders, commonly known
+      as block leaders, in shaping collective action and public goods provision in
+      peri-urban neighborhoods that are largely underserved by the state. I argue that
+      block-level elections confer legitimacy on these leaders, which in turn enables
+      them to mobilize residents to collectively provide public goods such as street signs and neighborhood security.
+      I also examine whether the presence of these internally provided public goods shapes
+      residents' perceptions of tenure security in neighborhoods where the threat of
+      eviction by local authorities remains real.
+    </p>
+    <p>
+      This research draws on a mixed-methods design that combines key informant
+      interviews, original surveys, archival research, and an embedded conjoint
+      experiment across ten informal neighborhoods in Lilongwe. In doing so, it
+      contributes to broader debates on urban governance, informal leadership,
+      collective action, and state-citizen relations in sub-Saharan Africa.
+    </p>
+  </main>
+
+</div>
+</body>
+</html>

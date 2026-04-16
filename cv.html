@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV – John Tengatenga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:    #bb0000;
+      --dark:   #1a1a1a;
+      --mid:    #555;
+      --light:  #f7f7f7;
+      --border: #e0e0e0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      background: #fff;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ── */
+    aside {
+      background: var(--light);
+      border-right: 1px solid var(--border);
+      padding: 48px 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    aside .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--border);
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    aside h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    aside .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--mid);
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    aside nav a {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-left: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    aside nav a:hover,
+    aside nav a.active {
+      color: var(--red);
+      border-left-color: var(--red);
+    }
+
+    aside .contact {
+      margin-top: 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--mid);
+      line-height: 1.9;
+    }
+
+    aside .contact a { color: var(--red); text-decoration: none; }
+    aside .contact a:hover { text-decoration: underline; }
+
+    /* ── Main ── */
+    main {
+      padding: 64px 60px 80px;
+      max-width: 800px;
+    }
+
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+
+    /* Row layout for education/awards */
+    .row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 6px 16px;
+      margin-bottom: 18px;
+      align-items: start;
+    }
+
+    .row .year {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--mid);
+      padding-top: 3px;
+    }
+
+    .row strong { display: block; line-height: 1.5; }
+    .row span   { font-size: 0.95rem; color: var(--mid); line-height: 1.5; }
+
+    /* Publications */
+    .pub {
+      margin-bottom: 22px;
+      padding-left: 16px;
+      border-left: 3px solid var(--border);
+      transition: border-color 0.15s;
+    }
+
+    .pub:hover { border-left-color: var(--red); }
+
+    .pub .year {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--mid);
+      margin-bottom: 3px;
+    }
+
+    .pub .pub-title { font-weight: 600; line-height: 1.5; }
+    .pub .venue { font-style: italic; color: var(--mid); font-size: 0.95rem; }
+
+    /* Teaching */
+    .teach-block { margin-bottom: 22px; }
+    .teach-block .role {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--mid);
+      margin-bottom: 8px;
+    }
+
+    ul.plain { list-style: none; padding: 0; }
+    ul.plain li { margin-bottom: 6px; }
+    ul.plain li::before { content: "– "; color: var(--red); }
+
+    /* Download button */
+    .btn {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: var(--red);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 0 0 48px; }
+
+    @media (max-width: 680px) {
+      .page { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+      main  { padding: 32px 20px; }
+      .row  { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <img class="photo" src="headshoot_JT.png" alt="John Tengatenga" />
+    <h1>John Tengatenga</h1>
+    <p class="title">
+      PhD Candidate<br />
+      Political Science<br />
+      The Ohio State University
+    </p>
+
+    <nav>
+      <a href="index.html">About</a>
+      <a href="cv.html" class="active">CV</a>
+      <a href="book.html">Book Project</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+
+    <div class="contact">
+      <a href="mailto:tengatenga.1@osu.edu">tengatenga.1@osu.edu</a><br />
+      614-292-2880<br />
+      <a href="https://scholar.google.com/citations?user=lkTJcEYAAAAJ&hl=en">Google Scholar</a><br />
+      Columbus, Ohio
+    </div>
+  </aside>
+
+  <main>
+
+    <section>
+      <p>The full CV can be downloaded <a href="Tengatenga_John_CV-2.pdf">here</a>.</p>
+      <iframe
+        src="Tengatenga_John_CV-2.pdf"
+        width="100%"
+        height="800px"
+        style="margin-top: 20px; border: 1px solid #e0e0e0; border-radius: 4px;"
+      >
+        <p>Your browser does not support embedded PDFs.
+          <a href="Tengatenga_John_CV-2.pdf">Click here to download instead.</a>
+        </p>
+      </iframe>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

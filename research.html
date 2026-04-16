@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research – John Tengatenga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:    #bb0000;
+      --dark:   #1a1a1a;
+      --mid:    #555;
+      --light:  #f7f7f7;
+      --border: #e0e0e0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      background: #fff;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--light);
+      border-right: 1px solid var(--border);
+      padding: 48px 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    aside .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--border);
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    aside h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    aside .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--mid);
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    aside nav a {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-left: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    aside nav a:hover,
+    aside nav a.active {
+      color: var(--red);
+      border-left-color: var(--red);
+    }
+
+    aside .contact {
+      margin-top: 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--mid);
+      line-height: 1.9;
+    }
+
+    aside .contact a { color: var(--red); text-decoration: none; }
+    aside .contact a:hover { text-decoration: underline; }
+
+    main {
+      padding: 64px 60px 80px;
+      max-width: 800px;
+    }
+
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+
+    p { line-height: 1.8; margin-bottom: 14px; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 14px;
+      color: var(--mid);
+    }
+
+    /* Publications */
+    .pub {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.75;
+    }
+
+    .pub:last-child { border-bottom: none; }
+
+    .pub { font-weight: 400; }
+    .pub .venue { font-style: italic; }
+    .pub a { color: var(--red); text-decoration: none; }
+    .pub a:hover { text-decoration: underline; }
+
+    /* Research experience rows */
+    .row {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 6px 16px;
+      margin-bottom: 18px;
+      align-items: start;
+    }
+
+    .row .year {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--mid);
+      padding-top: 3px;
+    }
+
+    .row strong { display: block; line-height: 1.5; }
+    .row span   { font-size: 0.95rem; color: var(--mid); line-height: 1.5; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 0 0 48px; }
+
+    @media (max-width: 680px) {
+      .page { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+      main  { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <img class="photo" src="headshoot_JT.png" alt="John Tengatenga" />
+    <h1>John Tengatenga</h1>
+    <p class="title">
+      PhD Candidate<br />
+      Political Science<br />
+      The Ohio State University
+    </p>
+
+    <nav>
+      <a href="index.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="book.html">Book Project</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+
+    <div class="contact">
+      <a href="mailto:tengatenga.1@osu.edu">tengatenga.1@osu.edu</a><br />
+      614-292-2880<br />
+      <a href="https://scholar.google.com/citations?user=lkTJcEYAAAAJ&hl=en">Google Scholar</a><br />
+      Columbus, Ohio
+    </div>
+  </aside>
+
+  <main>
+
+    <section>
+      <h2>Research Interests</h2>
+      <div class="tags">
+        <span class="tag">Comparative Politics</span>
+        <span class="tag">Urban Politics</span>
+        <span class="tag">Political Economy of Development</span>
+        <span class="tag">Public Opinion</span>
+        <span class="tag">Corruption</span>
+        <span class="tag">Experimental Methods</span>
+        <span class="tag">African Politics</span>
+        <span class="tag">Survey Research</span>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="pub">
+        Chirwa, G., Dulani, B., Sithole, L., Chunga, J., Alfonso, W., &amp; <strong>Tengatenga, J.</strong> (2021). "Malawi at the Crossroads: Does the fear of contracting COVID-19 affect the propensity to vote." <span class="venue">European Journal of Development Research</span>, 34(1): 409–431. [<a href="https://link.springer.com/content/pdf/10.1057/s41287-020-00353-1.pdf" target="_blank">PDF</a>]
+      </div>
+
+      <div class="pub">
+        Dulani, B., &amp; <strong>Tengatenga, J.</strong> (2020). "Big Man Rule in Africa: Are Africans Getting the Leadership they want?" <span class="venue">The African Review</span>, 46(2): 275–291. [<a href="https://www.jstor.org/stable/pdf/48659602.pdf" target="_blank">PDF</a>]
+      </div>
+
+      <div class="pub">
+        Soyiyo, S., <strong>Tengatenga, J.</strong>, &amp; Mosiwa, B. (2020). "The Fear of Economic Impacts of COVID-19 and Public Response to Lockdown Measures in Malawi." <span class="venue">Journal of Public Administration</span>, 55(3): 538–548. [<a href="https://journals.co.za/doi/pdf/10.10520/ejc-jpada-v5-n3-a5" target="_blank">PDF</a>]
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Research Experience</h2>
+
+      <div class="row">
+        <span class="year">2022</span>
+        <div>
+          <strong>USAID Development Food Security Activity (DFSA) — Malawi</strong>
+          <span>Research Associate for Dr. Lasse Brune, Prof. Dean Karlan &amp; Prof. Craig McIntosh</span>
+        </div>
+      </div>
+      <div class="row">
+        <span class="year">2020</span>
+        <div>
+          <strong>Governance and Pre-Election Survey — IPOR Malawi</strong>
+          <span>Research Manager</span>
+        </div>
+      </div>
+      <div class="row">
+        <span class="year">2020</span>
+        <div>
+          <strong>GLD-IPOR COVID-19 Surveys — Malawi</strong>
+          <span>Data Manager</span>
+        </div>
+      </div>
+      <div class="row">
+        <span class="year">2019</span>
+        <div>
+          <strong>Local Governance Perception Index — Malawi</strong>
+          <span>Data Manager</span>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Talks &amp; Conferences</h2>
+
+      <div class="row">
+        <span class="year">2026</span>
+        <div><strong>International Studies Association (ISA)</strong><span>Columbus, Ohio</span></div>
+      </div>
+      <div class="row">
+        <span class="year">2025</span>
+        <div><strong>African Studies Association (ASA)</strong><span>Atlanta, Georgia</span></div>
+      </div>
+      <div class="row">
+        <span class="year">2025</span>
+        <div><strong>Working Group on African Political Economy (WGAPE)</strong><span>The Ohio State University, Columbus, Ohio</span></div>
+      </div>
+      <div class="row">
+        <span class="year">2025</span>
+        <div><strong>Comparative Politics Workshop</strong><span>Department of Political Science, OSU, Columbus, Ohio</span></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Tengatenga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:    #bb0000;
+      --dark:   #1a1a1a;
+      --mid:    #555;
+      --light:  #f7f7f7;
+      --border: #e0e0e0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      background: #fff;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ── */
+    aside {
+      background: var(--light);
+      border-right: 1px solid var(--border);
+      padding: 48px 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    aside .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--border);
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    aside h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    aside .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--mid);
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    aside nav a {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-left: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    aside nav a:hover,
+    aside nav a.active {
+      color: var(--red);
+      border-left-color: var(--red);
+    }
+
+    aside .contact {
+      margin-top: 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--mid);
+      line-height: 1.9;
+    }
+
+    aside .contact a { color: var(--red); text-decoration: none; }
+    aside .contact a:hover { text-decoration: underline; }
+
+    /* ── Main ── */
+    main {
+      padding: 64px 60px 80px;
+      max-width: 760px;
+    }
+
+    main h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+
+    main p { line-height: 1.8; margin-bottom: 20px; }
+    main a { color: var(--red); text-decoration: none; }
+    main a:hover { text-decoration: underline; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 14px;
+      color: var(--mid);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: var(--red);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-right: 12px;
+      margin-top: 8px;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--red);
+      border: 1px solid var(--red);
+    }
+    .btn-outline:hover { background: var(--light); opacity: 1; }
+
+    @media (max-width: 680px) {
+      .page { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+      main  { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <img class="photo" src="headshoot_JT.png" alt="John Tengatenga" />
+    <h1>John Tengatenga</h1>
+    <p class="title">
+      PhD Candidate<br />
+      Political Science<br />
+      The Ohio State University
+    </p>
+
+    <nav>
+      <a href="index.html" class="active">About</a>
+      <a href="cv.html">CV</a>
+      <a href="book.html">Book Project</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+
+    <div class="contact">
+      <a href="mailto:tengatenga.1@osu.edu">tengatenga.1@osu.edu</a><br />
+      614-292-2880<br />
+      <a href="https://scholar.google.com/citations?user=lkTJcEYAAAAJ&hl=en">Google Scholar</a><br />
+      Columbus, Ohio
+    </div>
+  </aside>
+
+  <main>
+    <h2>Welcome!</h2>
+    <p>
+      I am a PhD candidate in Political Science at The Ohio State University,
+      specializing in Comparative Politics and Political Methodology, with a minor
+      in Political Psychology.
+    </p>
+    <p>
+      My research sits at the intersection of African politics, urban governance,
+      and political behavior. I use experimental and survey methods to study how
+      citizens respond to corruption, development policies, and political leadership
+      in sub-Saharan Africa. My research has appeared in the <em>European Journal
+      of Development Research</em> and <em>African Review</em>.
+    </p>
+    <p>
+      Prior to joining Ohio State, I received an MA in International Relations (2018)
+      from Miami University and a BA in International Relations from James Madison
+      College at Michigan State University (2017), with a minor in Environmental
+      Studies and Sustainability from the Residential Initiative on the Study of
+      the Environment (RISE).
+    </p>
+
+    <hr class="divider" />
+
+    <h2>Contact</h2>
+    <p>
+      Department of Political Science<br />
+      2031 Derby Hall, 154 North Oval Mall, Columbus, OH 43210<br />
+      <a href="mailto:tengatenga.1@osu.edu">tengatenga.1@osu.edu</a>
+    </p>
+
+  </main>
+
+</div>
+</body>
+</html>
